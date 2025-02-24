@@ -1,0 +1,285 @@
+    <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.typekit.net/xfx8yzd.css">
+<style>
+	html {
+	scroll-behavior: smooth;
+	}
+	body {
+    margin: 0px;
+	padding: 0px;
+    font-family: "Proxima Nova", Verdana, cursive;
+    background-color: #C9CAED;
+	}
+	
+	/* Navigation */
+	.topnav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+	flex-wrap: wrap;
+    background-color: #FFFFFF;
+    padding: 14px 16px;
+	padding-top: 0px;
+	}
+	.topnav a {
+    color: #1E192E;
+    text-align: center;
+    padding: 14px 16px;
+    margin: 15px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    border: thin solid #B0B1E5;
+	}
+	.topnav a:hover {
+  	background-color: #B0B1E5;
+  	color: #FFFFFF;
+	}
+	.topnav a.active {
+  	background-color: #6163CB;
+  	color: white;
+	}
+	.topnav .icon {
+  	display: none;
+	}
+	
+	#wrapper {
+    min-width: 375px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #B0B1E5;	
+	}
+	
+	/* Header */
+	header {
+    display: flex;
+    justify-content: center;
+	align-items: center;
+    background-color: #FFFFFF;
+	width: 100%;
+	height: 200px;
+	padding-bottom: 0px;
+    }
+	nav {
+   	display: flex;
+    justify-content: center;
+    background-color: #FFFFFF;
+	width: 100%;
+	padding-top: 0px;
+    }
+	h1 {
+	font-family: "cinema-script", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 100px;
+	padding-bottom: 0px;
+	padding-top: 10px;
+	}
+	
+	/* Main */
+	article {
+	background-color: #FFFFFF;
+    border-radius: 25px;
+	margin: 25px;
+	padding: 25px;
+	font-size: 18px;
+    } 
+	section {
+	background-color: #FFFFFF;
+    border-radius: 25px;
+	margin: 25px;
+	padding: 25px;
+	padding-right: 15px;
+	padding-left: 25px;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	font-size: 18px;
+    }
+	.imageContainer {
+  	width: 30%;
+	max-width: 100%;
+	height: auto;
+    transition: width 0.3s ease-in-out;
+	}
+	.imageContainer.expanded {
+    width: 50%;
+	border-radius: 0px;
+	justify-content: center;
+	}
+	.textright {
+	max-width: 70%;
+	padding-left: 20px;
+	}
+	img {
+	object-fit: contain;
+	}
+	
+	/* Footer */
+	footer {
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF;
+    color: #B0B1E5;
+	text-align: center;
+	padding-top: 15px;
+    }
+	footer a {
+	color: #6163CB;
+	}
+
+    
+	/* The media query below (lines 46-66 allow for the responsive nav) */      
+	@media screen and (max-width: 600px) {
+  		.topnav a:not(:first-child) {display: none;}
+  		.topnav a.icon {
+    	float: none;
+    	display: block;
+  		}
+		section {
+		padding-left: 10px;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+  		.topnav.responsive {position: relative;}
+  		.topnav.responsive .icon {
+   		position: absolute;
+    	right: 0;
+    	top: 0;
+  		}
+  		.topnav.responsive a {
+    	float: none;
+    	display: block;
+    	text-align: center;
+		margin: 0px;
+  		}  
+		.imageContainer {
+  		width: 90%;
+		max-width: 100%;
+		height: auto;
+   		transition: width 0.3s ease-in-out;
+		}
+		
+		section {
+        display: flex;
+        flex-direction: column; /* Stack the image and text vertically */
+        align-items: center; /* Center the content horizontally */
+   		}
+		.imageContainer.expanded {
+    	width: 60%;
+		border-radius: 0px;
+		justify-content: center;
+		}
+		nav {
+		font-size: 12px;
+		}
+
+    	
+	}
+	
+	/* Added a new, simple media query; minimum pixel at 784 */    
+	@media screen and (min-width:784px){
+    	p {
+    	padding-left: 100px;
+    	padding-right: 100px;    
+    	}
+		.textright {
+		float: none;
+		display: flex;
+		}
+		}
+</style>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+		<h1>H.M.</h1>
+	</header>
+<nav>
+<ul class="topnav" id="myTopnav">
+  <a href="#" class="active">Home</a>
+  <a href="#a">Typography</a>
+  <a href="#b">Tech and Production</a>
+  <a href="#c">Interactive Design</a>    
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i></a>
+    </ul>
+	</nav>   
+	
+    <article>
+		<p><strong>About Me</strong><br/><br/>
+		I'm a student that is currently majoring in Graphic Design. I'm proficient in the Adobe Creative Cloud Programs as well as Procreate and Gimp. I'm passionate about arts, and design provides me with the inspiration needed to
+		create and bring a spark of creativity into everything
+		I make. Through my work I strive to create meaningful and effective
+		designs to communicate a message, idea, or even a vibe. Some of my previously completed projects can be seen below.</p> 
+    </article>
+	
+	<main>
+    <hr width="90%">
+    <section id="a">
+    <img src="links/typography1posterproject.png" alt="AI Seminar Event Poster" width="30%" class="imageContainer"/><br/>
+		<div class="textright">
+			<p><strong>Swiss Typography Poster</strong><br/><br/>
+		Designed a poster using the Swiss aesthetic. Focused on using text and grid space to create a minimalist poster design advertising an AI Seminar on Oregon State University. Designed using Adobe Illustrator.<br/><br/><em>Click image to enlarge or shrink.</em></p>
+		</div>
+    </section>
+	
+   <hr width="90%">
+    <section id="b">
+    <img src="links/productionproject.png" alt="Carlsbad Caverns National Park Poster" width="30%" class="imageContainer"/><br/>
+		<div class="textright">
+			<p><strong>National Park Poster</strong><br/><br/>
+		Designed a travel poster for the United States National Park of Carlsbad Caverns that encourages viewers to travel and explore the wonders of the natural site. Poster made using Adobe Photoshop and Adobe Illustrator.<br/><br/><em>Click image to enlarge or shrink.</em></p>
+		</div>
+    </section>
+	
+ 	<hr width="90%">
+    <section id="c">
+    <img src="links/websitemockup_asgn-e.png" alt="Website Mockup" width="30%" class="imageContainer"/><br/>
+    <div class="textright">
+		<p><strong>Mockup Website on Postmodern Graphic Design</strong><br/><br/>
+		A website that explains the history of grunge as a genre of postmodern graphic design along with some of the influential designers and artists that made the genre.<br/><br/><em>Click image to enlarge or shrink.</em></p>
+		</div>
+    </section>
+	</main>
+    
+    
+    <footer>
+	<a href="#myTopnav">Go back to the top</a>
+		<p>Copyright H.M.</p></footer>
+</div>
+    
+<!-- Script stays outside of my wrapper id-->
+<script> 
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+	
+    const images = document.querySelectorAll('.imageContainer');
+
+    // Loop through each image and add a click event listener
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            // Toggle the "expanded" class on the clicked image
+            this.classList.toggle('expanded');
+        });
+    });
+
+</script>
+
+</body>
+</html>
